@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+shapely
+rasterio
+contextily
+geopy
+mercantile
+requests
+pillow

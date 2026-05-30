@@ -12,8 +12,6 @@ This document explains the selected outputs included in the public repository.
 | Route map | `assets/figures/route_map.png` | Shows vehicle routes/movements in the Q case study |
 | Protected signal timing | `assets/figures/protected_signal_timing.png` | Shows inferred protected-movement signal intervals |
 | Permissive signal timing | `assets/figures/permissive_signal_timing.png` | Shows permissive movement timing behavior |
-| Space-time example NS | `assets/figures/space_time_ns_lane_b_example.png` | Example of lane-level vehicle trajectories and signal state |
-| Space-time example ES | `assets/figures/space_time_es_lane_a_example.png` | Example of turning-movement trajectory behavior |
 | Composite space-time | `assets/figures/composite_space_time_all.png` | Stitched clean windows from selected lanes and time ranges |
 | Cumulative ES | `assets/figures/cumulative_es_1740_1744.png` | Cumulative arrival/departure example for East to South movement |
 | Headway model | `assets/figures/headway_vehicle_order.png` | Lane-level headway versus vehicle order in queue |
@@ -31,4 +29,5 @@ This document explains the selected outputs included in the public repository.
 ## Privacy and Data Scope
 
 Only processed figures and compact result tables are included. The full UAV
-trajectory dataset and full generated output directories are excluded.
+trajectory dataset and full generated output directories are excluded. The
+thesis PDF is included separately in `thesis/thesis.pdf`.

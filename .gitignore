@@ -1,4 +1,6 @@
 *.pdf
+!thesis/
+!thesis/thesis.pdf
 *.csv
 !results/*.csv
 *.mp4
@@ -20,4 +22,4 @@ outputs_Q/
 outputs_M/
 outputs_R/
 thesis_LATEX/
-thesis.pdf
+/thesis.pdf

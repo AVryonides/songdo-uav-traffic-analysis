@@ -7,8 +7,8 @@ The project develops a Python workflow for extracting intersection performance
 measures from vehicle trajectories, with emphasis on the Q intersection as the
 main case study and additional analysis for the M and R intersections.
 
-Raw UAV trajectory files, full generated output folders, and the full thesis PDF
-are intentionally not included in this public repository.
+Raw UAV trajectory files and full generated output folders are intentionally not
+included in this public repository.
 
 ## Contents
 
@@ -16,7 +16,9 @@ are intentionally not included in this public repository.
 - [Study Area](#study-area)
 - [Analysis Workflow](#analysis-workflow)
 - [Selected Outputs](#selected-outputs)
+- [Reusable Scripts](#reusable-scripts)
 - [Result Tables](#result-tables)
+- [Thesis PDF](#thesis-pdf)
 - [Repository Structure](#repository-structure)
 - [Notes on Data Availability](#notes-on-data-availability)
 
@@ -112,12 +114,6 @@ More implementation detail is available in [docs/methodology.md](docs/methodolog
 
 ![Permissive signal timing](assets/figures/permissive_signal_timing.png)
 
-### Space-Time Diagram Examples
-
-![Space-time example, North to South lane B](assets/figures/space_time_ns_lane_b_example.png)
-
-![Space-time example, East to South lane A](assets/figures/space_time_es_lane_a_example.png)
-
 ### Composite Space-Time Diagram
 
 ![Composite space-time diagram](assets/figures/composite_space_time_all.png)
@@ -134,6 +130,35 @@ More implementation detail is available in [docs/methodology.md](docs/methodolog
 
 ![Observed versus modelled vehicle counts](assets/figures/model_validation_pairwise.png)
 
+## Reusable Scripts
+
+The reusable analysis code is provided in [analysis_scripts/](analysis_scripts/).
+The scripts are organized by intersection:
+
+| Folder | Purpose |
+| --- | --- |
+| `analysis_scripts/songdo_q/` | Q intersection pipeline and final thesis analysis workflow |
+| `analysis_scripts/songdo_m/` | M intersection adaptation |
+| `analysis_scripts/songdo_r/` | R intersection adaptation |
+
+The scripts can be adapted to another intersection by modifying geometry files,
+movement rules, lane rules, and protected/permissive signal definitions.
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
+
+Example Q run:
+
+```bash
+cd analysis_scripts
+python -m songdo_q --traj /path/to/trajectory_Q.csv --seg /path/to/Q.csv --out /path/to/outputs_Q
+```
+
+See [analysis_scripts/README.md](analysis_scripts/README.md) for more detail.
+
 ## Result Tables
 
 Selected processed tables are included in [results/](results/):
@@ -147,9 +172,18 @@ Selected processed tables are included in [results/](results/):
 
 The tables contain processed thesis results only, not raw UAV trajectory data.
 
+## Thesis PDF
+
+The thesis PDF is included in [thesis/thesis.pdf](thesis/thesis.pdf).
+
 ## Repository Structure
 
 ```text
+analysis_scripts/
+  songdo_q/
+  songdo_m/
+  songdo_r/
+  README.md
 assets/
   figures/
     q_intersection_layout.png
@@ -158,8 +192,6 @@ assets/
     route_map.png
     protected_signal_timing.png
     permissive_signal_timing.png
-    space_time_ns_lane_b_example.png
-    space_time_es_lane_a_example.png
     composite_space_time_all.png
     cumulative_es_1740_1744.png
     headway_vehicle_order.png
@@ -172,7 +204,10 @@ results/
   lane_saturation_model_summary.csv
   traffic_light_capped_median_validation_table.csv
   traffic_light_validation_summary.csv
+thesis/
+  thesis.pdf
 README.md
+requirements.txt
 ```
 
 ## Notes on Data Availability
@@ -183,7 +218,6 @@ directory. The following are intentionally excluded:
 - raw UAV trajectory CSV files,
 - generated full output directories,
 - videos,
-- thesis PDF,
 - private draft material.
 
 ## Author
