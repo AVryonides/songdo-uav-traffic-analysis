@@ -1,0 +1,7 @@
+index;lane;direction;h_sat;t_C;r_sat
+1;East Turns to South Lane A;Left;2.0;10.1;0.5
+2;North Turns to East Lane B;Left;3.2;11.55;0.312
+3;North Through South Lane B;Downwards;2.246;14.475;0.445
+4;South Through North Lane A;Upwards;2.174;11.633;0.46
+5;South Through North Lane B;Upwards;2.389;13.38;0.419
+6;South Through North Lane C;Upwards;2.0;12.95;0.5

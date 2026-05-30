@@ -1,5 +1,6 @@
 *.pdf
 *.csv
+!results/*.csv
 *.mp4
 *.avi
 *.mov

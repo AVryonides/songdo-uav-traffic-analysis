@@ -1,0 +1,4 @@
+movement_group;N_lanes;standard_error;avg_r_sat
+Overall Protected;6;0.028;0.439 ± 0.028
+Through;4;0.017;0.456 ± 0.017
+Turns to;2;0.094;0.406 ± 0.094
