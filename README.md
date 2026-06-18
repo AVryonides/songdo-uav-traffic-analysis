@@ -1,4 +1,4 @@
-# UAV-Based Traffic Analysis at Songdo Intersections
+# Junction Operation Evaluation Using UAV-Obtained Traffic Data
 
 This repository showcases thesis work on traffic analysis from UAV-obtained
 vehicle trajectory data in Songdo, South Korea.
